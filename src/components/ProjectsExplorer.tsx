@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import type { Project, ProjectCategory } from '@/lib/types';
 import { projectHref } from '@/lib/types';
-import { nightClass, nightStyle } from '@/lib/night';
+import Thumb from '@/components/Thumb';
 
 const FILTERS: { cat: 'all' | ProjectCategory; label: string }[] = [
   { cat: 'all', label: 'All' },
@@ -47,7 +47,7 @@ export default function ProjectsExplorer({ projects }: { projects: Project[] }) 
             {visible.map((p) => (
               <Link className="card" href={projectHref(p)} key={p.slug}>
                 <div className="media">
-                  <div className={nightClass(p.cardNight, 'night night-img')} style={nightStyle(p.cardNight)} />
+                  <Thumb image={p.heroImageUrl} alt={p.title} night={p.cardNight} />
                   <span className="badge">{p.badge}</span>
                 </div>
                 <div className="meta">

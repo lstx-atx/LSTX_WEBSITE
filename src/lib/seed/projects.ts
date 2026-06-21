@@ -19,6 +19,7 @@ export const seedProjects: Project[] = [
       'Dynamic RGBW washes in blue, purple, and magenta sweep the facade; green LED accents trace the ramps and handrails; an illuminated fountain anchors the courtyard. Turnkey, brand-forward, every evening of the week.',
     heroNight: { glow: '30% 60%', c1: 'rgba(46,86,200,0.5)', glow2: '74% 40%', c2: 'rgba(193,59,143,0.46)' },
     cardNight: { glow: '30% 70%', c1: 'rgba(46,86,200,0.48)', glow2: '74% 30%', c2: 'rgba(193,59,143,0.42)' },
+    heroImageUrl: '/media/projects/ways2well/ways2well-facade-blue.jpg',
     lead: 'Ways2Well wanted its Hill Country facility to make a statement, and Lighting Source TX delivered a complete commercial architectural lighting system to do it.',
     intro: {
       heading: 'A Brand That Glows After Dark',
@@ -26,12 +27,31 @@ export const seedProjects: Project[] = [
     },
     mediaLayout: 'gallery',
     media: [
-      { label: 'Facade · Blue & Purple', night: { glow: '35% 55%', c1: 'rgba(40,90,200,0.58)', glow2: '72% 45%', c2: 'rgba(120,58,170,0.5)' } },
-      { label: 'Facade · Magenta', night: { glow: '45% 50%', c1: 'rgba(193,59,143,0.58)', glow2: '65% 55%', c2: 'rgba(120,58,170,0.45)' } },
-      { label: 'Green LED · Ramps & Handrails', night: { glow: '50% 70%', c1: 'rgba(40,150,96,0.55)' } },
-      { label: 'Cool Blue Scene', night: { glow: '50% 60%', c1: 'rgba(46,110,210,0.55)' } },
-      { label: 'Courtyard Fountain', night: { glow: '50% 62%', c1: 'rgba(120,58,170,0.5)', glow2: '50% 80%', c2: 'rgba(40,120,200,0.45)' } },
-      { label: 'Branded Glass Entry', night: { glow: '50% 50%', c1: 'rgba(193,59,143,0.4)', glow2: '30% 50%', c2: 'rgba(40,90,200,0.4)' } },
+      {
+        label: 'Facade · Blue & Purple',
+        imageUrl: '/media/projects/ways2well/ways2well-facade-blue.jpg',
+        alt: 'Commercial building facade at night lit with blue and purple color-changing light, with US and Texas flags out front.',
+      },
+      {
+        label: 'Facade · Magenta & Purple',
+        imageUrl: '/media/projects/ways2well/ways2well-facade-magenta.jpg',
+        alt: 'Commercial facility exterior washed in magenta and purple light at night.',
+      },
+      {
+        label: 'Branded Glass Entry',
+        imageUrl: '/media/projects/ways2well/ways2well-branded-entry.jpg',
+        alt: 'Glass building entrance at night with the Ways2Well "W" logo, lit with color-changing architectural light.',
+      },
+      {
+        label: 'Green LED · Ramps & Handrails',
+        imageUrl: '/media/projects/ways2well/ways2well-green-ramps.jpg',
+        alt: 'Exterior ramp and handrails lit with green LED accent lighting at night.',
+      },
+      {
+        label: 'Cool Blue Scene',
+        imageUrl: '/media/projects/ways2well/ways2well-blue-scene.jpg',
+        alt: 'Commercial building exterior lit entirely in blue light at night.',
+      },
     ],
     specs: [
       { value: 'RGBW', label: 'Dynamic Facade Washes' },

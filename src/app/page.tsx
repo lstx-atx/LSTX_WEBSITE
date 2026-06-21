@@ -5,7 +5,8 @@ import PartnerGrid from '@/components/PartnerGrid';
 import ConsultForm from '@/components/ConsultForm';
 import { getFeaturedProjects } from '@/lib/content';
 import { projectHref } from '@/lib/types';
-import { nightClass, nightStyle } from '@/lib/night';
+import Thumb from '@/components/Thumb';
+import HeroBackground from '@/components/HeroBackground';
 import { SITE, CONTACT } from '@/lib/site';
 
 const SERVICES = [
@@ -38,7 +39,7 @@ export default async function HomePage() {
 
       {/* HERO */}
       <header className="hero">
-        <div className="bg night" style={nightStyle({ glow: '42% 70%' })} />
+        <HeroBackground />
         <div className="scrim" />
         <div className="inner">
           <div className="container">
@@ -136,10 +137,14 @@ export default async function HomePage() {
           <div style={{ marginTop: 48 }}>
             {featured.map((p, i) => (
               <article className={`proj reveal${i % 2 === 1 ? ' flip' : ''}`} key={p.slug}>
-                <div className={nightClass(p.cardNight, 'media night')} style={nightStyle(p.cardNight)}>
-                  <span className="night-label">
-                    {p.cardNight?.spectrum ? 'Project gallery' : 'Project reel'} · {p.title}
-                  </span>
+                <div className="media">
+                  <Thumb
+                    image={p.heroImageUrl}
+                    alt={p.title}
+                    night={p.cardNight}
+                    label={`${p.cardNight?.spectrum ? 'Project gallery' : 'Project reel'} · ${p.title}`}
+                    fill
+                  />
                 </div>
                 <div className="body">
                   <div>

@@ -49,22 +49,28 @@ npm run lint    # lint
 
 ---
 
-## Where your project images go
+## Project images — the per-project workflow
 
-The site currently shows color-aware **"after dark" placeholders** wherever real photography belongs (hero, project galleries, team photos). Two ways to drop in the real images from the **WAC JUNE 2026 MARKETING** Drive folder:
+Each project's photos live in their own folder and are wired into the seed content with alt text. Projects without photos yet fall back to the color-aware "after dark" placeholders, so the site always looks finished.
 
-**A. Quick way — static files (no CMS):**
-1. Put images in `public/media/` (e.g. `public/media/ways2well-facade.jpeg`).
-2. In `src/lib/seed/projects.ts`, give the project a `heroImageUrl` and add `imageUrl` to its `media` cells. The placeholders disappear automatically.
-   ```ts
-   heroImageUrl: '/media/ways2well-facade.jpeg',
-   media: [{ label: 'Facade · Blue & Purple', imageUrl: '/media/ways2well-1.jpeg' }, ...]
-   ```
-3. Team photos: add `photoUrl: '/team/sam.jpeg'` in `src/lib/seed/team.ts`.
+**Folder convention:** `public/media/projects/<slug>/`
+Slugs: `ways2well`, `stardust-ranch`, `sts-peter-paul`, `comal-landa-annex`, `private-estates`.
 
-**B. Proper way — Sanity CMS** (lets you manage content without editing code): see *Sanity* below. Once configured, you upload images in Sanity Studio and they flow through automatically.
+**How we do them one at a time.** You name a project; I take it from there:
+1. Pull that project's photos (from your Drive download folder, or wherever you point me).
+2. Optimize them — HEIC → JPG, resize to ~1800px, compress to a few hundred KB each (via `sips`).
+3. Drop them in `public/media/projects/<slug>/` and wire `heroImageUrl` + the `media[]` gallery (with `imageUrl` + `alt`) in `src/lib/seed/projects.ts`, using the captions/alt-text from the project portfolio doc.
 
-The hero is designed for a **full-viewport autoplay video**. To use one, drop `public/media/hero.mp4` and tell me — I'll swap the hero placeholder for the `<video>` element (kept as a follow-up so the build stays light until the file exists).
+Listing cards, the homepage feature, and the detail hero + gallery all switch from placeholder to real photo automatically once `heroImageUrl` / `media[].imageUrl` are set.
+
+**Status:**
+- ✅ **Ways2Well** — hero + 5-image gallery wired (`public/media/projects/ways2well/`).
+- ⏳ Stardust Ranch, Sts. Peter & Paul, Comal Landa Annex, Private Estates — placeholders, awaiting the go-ahead per project.
+
+Team photos: add `photoUrl` in `src/lib/seed/team.ts` (or via Sanity).
+
+### Hero video
+The hero shows a real still from your footage (`public/media/hero/hero-poster.jpg`) and is ready to upgrade to a full autoplay loop. The source clip is **4K HEVC, ~157 MB** — too large for GitHub (100 MB limit) and not a browser-friendly codec, so it must be transcoded to a compressed **H.264 MP4** (target < 10 MB, 1080p, no audio) first. Once that exists at `public/media/hero/hero-loop.mp4`, set `HERO_VIDEO_SRC` in `src/lib/site.ts` and the `<video>` takes over (the poster is already its fallback). Transcoding needs `ffmpeg` installed.
 
 ---
 

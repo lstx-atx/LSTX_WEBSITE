@@ -30,6 +30,13 @@ export const NAV_LINKS = [
 
 export const ESTIMATE_HREF = '/estimator';
 
+// Hero background. HERO_VIDEO_SRC stays empty until a web-compressed H.264 loop
+// exists (the source footage is 4K HEVC and must be transcoded for browsers).
+// HERO_POSTER is a still pulled from that footage — shown now, and reused as the
+// video's poster frame once the loop is wired in.
+export const HERO_VIDEO_SRC = '';
+export const HERO_POSTER = '/media/hero/hero-poster.jpg';
+
 export const SOCIAL = [
   { key: 'instagram', label: 'Instagram', href: 'https://instagram.com/lightingsourcetx' },
   { key: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/company/lighting-source-tx' },

@@ -4,7 +4,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import { getCaseStudies } from '@/lib/content';
 import { projectHref } from '@/lib/types';
-import { nightClass, nightStyle } from '@/lib/night';
+import Thumb from '@/components/Thumb';
 
 export const metadata: Metadata = {
   title: 'Case Studies',
@@ -34,10 +34,8 @@ export default async function CaseStudiesPage() {
           <div className="cs-list">
             {studies.map((p, i) => (
               <Link className={`cs reveal${i % 2 === 1 ? ' flip' : ''}`} href={projectHref(p)} key={p.slug}>
-                <div className={nightClass(p.cardNight, 'media night')} style={nightStyle(p.cardNight)}>
-                  <span className="night-label">
-                    {p.title} · {p.location}
-                  </span>
+                <div className="media">
+                  <Thumb image={p.heroImageUrl} alt={p.title} night={p.cardNight} label={`${p.title} · ${p.location}`} fill />
                 </div>
                 <div className="body">
                   <span className="badge">{p.badge}</span>
