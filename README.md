@@ -63,9 +63,8 @@ Slugs: `ways2well`, `stardust-ranch`, `sts-peter-paul`, `comal-landa-annex`, `pr
 
 Listing cards, the homepage feature, and the detail hero + gallery all switch from placeholder to real photo automatically once `heroImageUrl` / `media[].imageUrl` are set.
 
-**Status:**
-- ✅ **Ways2Well** — hero + 5-image gallery wired (`public/media/projects/ways2well/`).
-- ⏳ Stardust Ranch, Sts. Peter & Paul, Comal Landa Annex, Private Estates — placeholders, awaiting the go-ahead per project.
+**Status:** ✅ All five projects wired with real photos (hero + galleries, alt text from the portfolio doc):
+Ways2Well, Stardust Ranch, Sts. Peter & Paul, Comal Landa Annex, Private Estates. Images are optimized with **ffmpeg** (not `sips` — it silently rotates some photos during resample).
 
 Team photos: add `photoUrl` in `src/lib/seed/team.ts` (or via Sanity).
 
@@ -76,12 +75,11 @@ The hero shows a real still from your footage (`public/media/hero/hero-poster.jp
 
 ## Deploy: GitHub → Vercel → GoDaddy
 
-### 1. Push to GitHub
-This folder is already a git repo with an initial commit. Create an empty GitHub repo (no README), then:
+### 1. GitHub
+Already live at **https://github.com/lstx-atx/LSTX_WEBSITE** (`main`). Future pushes:
 
 ```bash
-git remote add origin https://github.com/<your-username>/lightingsourcetx-web.git
-git push -u origin main
+git push origin main   # uses the lstx-atx repo; auth via your token or SSH key
 ```
 
 ### 2. Import into Vercel
