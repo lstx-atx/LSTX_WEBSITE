@@ -111,6 +111,7 @@ export const seedProjects: Project[] = [
       'A sweeping Hill Country estate made the centerpiece after dark — heritage live oaks uplit in warm white, gazebo, pool, and structures layered into one continuous composition across the grounds.',
     heroNight: { glow: '40% 72%', c1: 'rgba(240,210,150,0.42)', glow2: '70% 38%', c2: 'rgba(204,120,40,0.28)' },
     cardNight: { glow: '40% 72%', c1: 'rgba(240,210,150,0.42)', glow2: '70% 38%', c2: 'rgba(204,120,40,0.28)' },
+    heroImageUrl: '/media/projects/stardust-ranch/stardust-hero.jpg',
     lead: 'A signature Lighting Source TX landscape project — a sweeping Hill Country estate where the goal was to make the land itself the centerpiece after dark.',
     intro: {
       heading: 'The Property',
@@ -118,9 +119,21 @@ export const seedProjects: Project[] = [
     },
     mediaLayout: 'stack',
     media: [
-      { label: 'Estate hero · heritage oaks in warm white', night: { glow: '38% 70%', c1: 'rgba(240,210,150,0.44)' } },
-      { label: 'Grounds · gazebo & pool surround', night: { glow: '60% 60%', c1: 'rgba(240,222,170,0.4)' } },
-      { label: 'Wide · ranch structures & walkways', night: { glow: '48% 78%', c1: 'rgba(204,150,70,0.38)' } },
+      {
+        label: 'Estate grounds · oaks & structures',
+        imageUrl: '/media/projects/stardust-ranch/stardust-grounds-1.jpg',
+        alt: 'Large live oak trees uplit in warm white on a Hill Country estate at night with a ranch building to the side.',
+      },
+      {
+        label: 'Grounds · driveway & buildings',
+        imageUrl: '/media/projects/stardust-ranch/stardust-grounds-2.jpg',
+        alt: 'Wide nighttime view of Hill Country ranch grounds with uplit oak trees, illuminated buildings, and a driveway.',
+      },
+      {
+        label: 'Heritage oaks in warm white',
+        imageUrl: '/media/projects/stardust-ranch/stardust-grounds-3.jpg',
+        alt: 'Two large live oak trees uplit in warm white at night with a ranch building behind them.',
+      },
     ],
     quote: {
       text: 'Depth and dimension — a property that reads as one continuous, intentional composition rather than a scatter of fixtures.',
@@ -171,6 +184,7 @@ export const seedProjects: Project[] = [
       'A historic stone facade given a full-color Colorscaping® system — warm white for ordinary time, liturgical purple and red, festive red and green, patriotic red-white-and-blue. One install, limitless scenes.',
     heroNight: { spectrum: true },
     cardNight: { spectrum: true },
+    heroImageUrl: '/media/projects/sts-peter-paul/church-purple.jpg',
     lead: 'The historic stone facade of Sts. Peter and Paul is a community landmark — and Lighting Source TX gave it a lighting system as versatile as the calendar it serves.',
     intro: {
       heading: 'One Facade, Endless Occasions',
@@ -178,12 +192,31 @@ export const seedProjects: Project[] = [
     },
     mediaLayout: 'gallery',
     media: [
-      { label: 'Warm White · Everyday', night: { glow: '50% 45%', c1: 'rgba(240,222,170,0.55)' } },
-      { label: 'Liturgical Purple', night: { glow: '50% 45%', c1: 'rgba(120,58,170,0.6)' } },
-      { label: 'Deep Red', night: { glow: '50% 45%', c1: 'rgba(180,45,45,0.6)' } },
-      { label: 'Cool Blue', night: { glow: '50% 45%', c1: 'rgba(40,90,200,0.6)' } },
-      { label: 'Christmas Red & Green', night: { glow: '30% 50%', c1: 'rgba(180,45,45,0.55)', glow2: '70% 50%', c2: 'rgba(40,150,96,0.5)' } },
-      { label: 'Patriotic Red, White & Blue', night: { spectrum: true } },
+      {
+        label: 'Warm White · Everyday',
+        imageUrl: '/media/projects/sts-peter-paul/church-warm-white.jpg',
+        alt: 'Historic stone Catholic church facade at night lit in warm white light, highlighting the steeple and arched entry.',
+      },
+      {
+        label: 'Deep Red',
+        imageUrl: '/media/projects/sts-peter-paul/church-red.jpg',
+        alt: 'Stone Catholic church facade illuminated entirely in red light at night.',
+      },
+      {
+        label: 'Cool Blue',
+        imageUrl: '/media/projects/sts-peter-paul/church-blue.jpg',
+        alt: 'Stone Catholic church facade washed in blue light against a dark night sky.',
+      },
+      {
+        label: 'Christmas Red & Green',
+        imageUrl: '/media/projects/sts-peter-paul/church-christmas.jpg',
+        alt: 'Stone church facade illuminated in alternating red and green Christmas lighting at night.',
+      },
+      {
+        label: 'Patriotic Red, White & Blue',
+        imageUrl: '/media/projects/sts-peter-paul/church-patriotic.jpg',
+        alt: 'Church facade lit in red, white, and blue light sections for a patriotic display.',
+      },
     ],
     specs: [
       { value: 'RGBW', label: 'Full-Color Facade System' },
@@ -243,6 +276,7 @@ export const seedProjects: Project[] = [
       'Architectural accent uplighting with full-color RGBW capability — clean by default, blue for awareness causes, patriotic for national holidays, seasonal year-round. A public landmark that shines for the community.',
     heroNight: { glow: '50% 60%', c1: 'rgba(46,86,200,0.52)' },
     cardNight: { glow: '50% 60%', c1: 'rgba(46,86,200,0.5)' },
+    heroImageUrl: '/media/projects/comal-landa-annex/comal-blue.jpg',
     lead: 'Public buildings are community landmarks, and the Comal County Landa Annex deserved lighting to match.',
     intro: {
       heading: 'A Public Landmark That Shines',
@@ -250,9 +284,21 @@ export const seedProjects: Project[] = [
     },
     mediaLayout: 'gallery',
     media: [
-      { label: 'Blue · Awareness', night: { glow: '50% 55%', c1: 'rgba(40,90,200,0.6)' } },
-      { label: 'Warm White · Default', night: { glow: '50% 55%', c1: 'rgba(240,222,170,0.5)' } },
-      { label: 'Patriotic · Holidays', night: { spectrum: true } },
+      {
+        label: 'Green · Awareness Causes',
+        imageUrl: '/media/projects/comal-landa-annex/comal-green.jpg',
+        alt: 'Comal County Landa Annex building with a large oak tree uplit in green at night.',
+      },
+      {
+        label: 'Color For Events',
+        imageUrl: '/media/projects/comal-landa-annex/comal-purple.jpg',
+        alt: 'A large oak tree uplit in purple at night near a civic building in downtown New Braunfels.',
+      },
+      {
+        label: 'Colorscaping® Controller',
+        imageUrl: '/media/projects/comal-landa-annex/comal-controller.jpg',
+        alt: 'Stainless steel Colorscaping by WAC Lighting controller mounted on a stake against a brick wall.',
+      },
     ],
     body: [
       {
@@ -300,6 +346,7 @@ export const seedProjects: Project[] = [
       'Complete residential landscape and architectural lighting for the Hill Country’s finest private homes — facade grazing, path and tree uplighting, pool accents, and full-color holiday scenes.',
     heroNight: { glow: '38% 70%', c1: 'rgba(240,210,150,0.42)', glow2: '68% 40%', c2: 'rgba(204,120,40,0.24)' },
     cardNight: { glow: '38% 74%', c1: 'rgba(240,210,150,0.4)', glow2: '68% 40%', c2: 'rgba(204,120,40,0.24)' },
+    heroImageUrl: '/media/projects/private-estates/estate-front-blue-hour.jpg',
     lead: 'Lighting Source TX designs and installs landscape and architectural lighting for some of the Hill Country’s finest private residences.',
     intro: {
       heading: 'From Curb to Canopy',
@@ -307,12 +354,26 @@ export const seedProjects: Project[] = [
     },
     mediaLayout: 'gallery',
     media: [
-      { label: 'Front Elevation · Blue Hour', night: { glow: '40% 60%', c1: 'rgba(240,222,170,0.5)' } },
-      { label: 'Stone Column Grazing', night: { glow: '50% 55%', c1: 'rgba(240,210,150,0.46)' } },
-      { label: 'Heritage Oak Uplighting', night: { glow: '45% 70%', c1: 'rgba(240,210,150,0.42)' } },
-      { label: 'Pool & Patio Accents', night: { glow: '50% 75%', c1: 'rgba(40,120,200,0.5)' } },
-      { label: 'Holiday Red & Green', night: { glow: '35% 55%', c1: 'rgba(180,45,45,0.5)', glow2: '65% 55%', c2: 'rgba(40,150,96,0.45)' } },
-      { label: 'Path & Landscape Lighting', night: { glow: '50% 60%', c1: 'rgba(240,222,170,0.44)' } },
+      {
+        label: 'Front Elevation · Full Dark',
+        imageUrl: '/media/projects/private-estates/estate-front-dark.jpg',
+        alt: 'Modern stone home at night with warm-white architectural lighting on the facade, entry, and surrounding plantings.',
+      },
+      {
+        label: 'Stone Column Grazing',
+        imageUrl: '/media/projects/private-estates/estate-column-grazing.jpg',
+        alt: 'Close-up of a rough-cut limestone column lit from below with warm-white grazing light between two dark windows.',
+      },
+      {
+        label: 'Heritage Oak Uplighting',
+        imageUrl: '/media/projects/private-estates/estate-oak-uplighting.jpg',
+        alt: 'Large live oak tree uplit in warm white at dusk with a planting bed of softly lit shrubs.',
+      },
+      {
+        label: 'Colorscaping® Controller',
+        imageUrl: '/media/projects/private-estates/estate-controller.jpg',
+        alt: 'Stainless Colorscaping by WAC Lighting transformer with a Texas-flag cap on a stake by a fence.',
+      },
     ],
     body: [
       {
