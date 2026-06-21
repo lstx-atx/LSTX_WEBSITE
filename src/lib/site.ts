@@ -34,7 +34,7 @@ export const ESTIMATE_HREF = '/estimator';
 // exists (the source footage is 4K HEVC and must be transcoded for browsers).
 // HERO_POSTER is a still pulled from that footage — shown now, and reused as the
 // video's poster frame once the loop is wired in.
-export const HERO_VIDEO_SRC = '';
+export const HERO_VIDEO_SRC = '/media/hero/hero-loop.mp4';
 export const HERO_POSTER = '/media/hero/hero-poster.jpg';
 
 export const SOCIAL = [
